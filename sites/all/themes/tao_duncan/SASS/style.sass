@@ -1,0 +1,307 @@
+// General =========================
+
+body
+  :font-size 1em
+  :line-height 1.35em
+  :font-family serif
+  :background-color #fffffc
+  :background url(http://localhost/duncan2/sites/default/files/pictures/Globe_background.jpg) no-repeat fixed
+  
+  @media screen and (min-width: 2100px) 
+    :background-position 135% 75%
+    :background-size 70% Auto 
+    
+  @media screen and (min-width: 1650px) and (max-width: 2099px) 
+    :background-position 10% -60%
+    :background-size 60% Auto
+
+  @media screen and (min-width: 1050px) and (max-width: 1649px) 
+    :background-position 65% -10%
+    :background-size 60% Auto
+
+  @media screen and (min-width: 320px) and (max-width: 1049px) 
+    :background-position 85% -35%
+    :background-size constrain
+
+h1
+  :font-size 3em
+  :font-family Book Antiqua, Palatino Linotype, sans-serif
+  :line-height 0.9em
+  :padding-bottom 0.4em
+
+h2, h3, h4, h5, h6
+  :padding .15em 10% .3em 15%
+  :font-family Book Antiqua, Palatino Linotype, sans-serif
+
+h2
+  :font-size 2.2em
+  :line-height 0.8em
+  :text-align right  
+
+h3
+  :font-size 1.6em
+
+h4
+  :font-size 1.3em
+
+// Content width
+p
+  :max-width 30em
+  :margin-top 0.5em
+  :margin-bottom 1em
+
+#page .field-content
+  :max-width 28em
+
+// Main Content Styling ===============
+
+#main-content .links li
+  :padding 0.1em 0.8em 0.1em 0.8em
+  .active
+    :font-weight 600
+    :background-color rgba(150, 200, 250, 0.6)
+
+#main-content
+  input,
+  textarea
+    :background-color rgba(255, 255, 255, 0.9)
+    :padding-left 1em
+  .form-submit
+    :padding-left 0.5em
+    :padding-right 0.5em
+    :margin-left 0.5em
+    :margin-right 0.5em
+
+.more-link
+  :padding-right 3em
+
+.node-content .field
+  :padding-top 0.5em
+  :padding-bottom 1em
+  .field-items
+    :padding-left 1em
+
+// Regions layout ==============================================
+
+$regionPadding: 1em 0 0 1em
+$regionRGB: rgb(240, 240, 240)
+$regionRGBA: rgba(240, 242, 245, .85)
+
+#branding
+  //:display inline-block
+  //:position absolute
+  //:top 1%
+  //:right 1%
+  :float right
+  :padding 2em 4% 1em
+
+#navigation,
+#page
+  #main-content,
+  #sidebar-first,
+  #sidebar-second,
+    :display inline-block
+    :vertical-align bottom
+    :min-width 320px
+  #main-content
+    :padding 0.5em
+    :border solid 2px blue
+    :border-radius 1.5em
+    :background-color $regionRGB
+    :background-color $regionRGBA
+  #sidebar-second  
+    .block
+      :display inline-block
+      :padding $regionPadding
+      :vertical-align top
+
+.two-sidebars
+
+  @media screen and (max-width: 480px)
+    #sidebar-first
+      :margin-top 7%
+      :margin-bottom 1em
+
+  @media screen and (min-width: 481px) and (max-width: 749px)
+    #sidebar-first
+      :margin-top 5%
+      :margin-right 1em
+      :margin-bottom 1em
+      :padding $regionPadding
+      .views-row
+        :display inline-block
+        :vertical-align top
+        :max-width 45%
+
+    #main-content
+      //:width 30em 
+      :margin-left 10% 
+      :margin-right 10%
+      :padding $regionPadding
+
+  @media screen and (min-width: 750px) and (max-width: 919px)
+    #sidebar-first
+      :max-width 45%
+      :margin-top 5%
+      :margin-bottom 1em
+      :padding $regionPadding
+      .region
+        :float right
+        :width 75%
+        
+    #main-content
+      :max-width 45%
+      :padding $regionPadding
+      :padding-right 1em
+      :margin-left 1em
+      :margin-bottom 1em
+
+  @media screen and (min-width: 920px) and (max-width: 1199px)
+    #sidebar-first
+      :max-width 45%
+      :margin-top 5%
+      :padding $regionPadding
+      .region
+        :float right
+        :width 75%
+
+    #main-content
+      :max-width 48%
+      :margin-left 1em
+      :padding $regionPadding
+      :padding-right 1em
+        
+    #sidebar-second 
+      :padding $regionPadding
+      .block
+        float: left
+      
+
+  @media screen and (min-width: 1200px) and (max-width: 2560px)
+    #sidebar-first
+      :max-width 30%
+      :margin-top 20%
+      :padding $regionPadding
+      .region
+        :float right
+        :width 80%
+ 
+    #main-content
+      :max-width 28%
+      :margin-left 1em
+      :padding $regionPadding
+ 
+    #sidebar-second
+      :max-width 35%
+      :padding $regionPadding
+      .region
+        :width 90%
+
+.no-sidebars
+  #main-content
+    @media screen and (min-width: 800px) and (max-width: 2560px)
+      :width 35%
+      :min-width 30em
+      :max-width 40em
+      :margin-left 35%
+      :margin-top 4em
+    @media screen and (max-width: 799px)
+      :max-width 35em
+      :min-width 320px
+      :padding 1em
+
+
+//Problems View - Front page ==========
+
+.view-problems-view
+  .views-row
+    :display inline-block
+    :vertical-align top
+    :max-width 100%
+    :margin 1em 0em 0em 0em
+
+#block-views-problems-view-block-1
+  :padding 0.5em
+  :border solid 2px red
+  :background-color $regionRGB
+  :background-color $regionRGBA
+  :border-radius 1.5em
+
+// Constraints View - Front page ===========
+
+#block-views-constraints-view-block-1
+  :max-width 30em
+  :padding 0.5em
+  :border solid 2px #36c319
+  :background-color $regionRGB
+  :background-color $regionRGBA
+  :border-radius 1.5em
+  :margin-bottom 1em
+  :margin-right 1em
+  
+  @media screen and (max-width: 480px)
+    :margin-top 1em
+    :margin-right 0
+  
+  @media screen and (min-width: 481px) and (max-width: 749px)
+    :margin-top 1em
+    :margin-left 20%
+    :margin-right 5%
+
+  @media screen and (min-width: 750px) and (max-width: 874px)
+    :max-width 27em
+
+.view-constraints-view .views-field-body
+  :padding-left 1.5em
+
+// Current Projects ================
+
+#block-views-projects-block-1 
+  :padding 0.5em
+  :border solid 2px orange
+  :background-color $regionRGB
+  :background-color $regionRGBA
+  :border-radius 1.5em
+  .views-row
+    :padding 0.5em
+    :display block
+    :float left
+    :clear right
+    :max-width 20em
+
+  @media screen and (min-width: 1800px)
+    .views-row
+      :max-width 30%
+
+  @media screen and (min-width: 1350px) and (max-width: 1799px) 
+    .views-row
+      :max-width 45%
+
+  @media screen and (min-width: 1200px) and (max-width: 1349px)
+    .views-row
+      :min-width 320px
+
+  @media screen and (min-width: 1050px) and (max-width: 1199px)
+    :width 47%
+    .views-row
+      :max-width 45%
+
+  @media screen and (min-width: 875px) and (max-width: 1049px)
+    :width 35%
+    
+  @media screen and (min-width: 750px) and (max-width: 874px)
+    :width 28%
+
+  @media screen and (min-width: 650px) and (max-width: 749px)
+    :margin-right 1em
+    .views-row
+      :max-width 30%
+
+  @media screen and (min-width: 480px) and (max-width: 649px)
+    :margin-right 1em
+    .views-row
+      :max-width 45%
+
+  @media screen and (min-width: 320px) and (max-width: 479px)
+    .views-row
+      :min-width 320px

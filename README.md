@@ -1,4 +1,4 @@
-duncan
+Duncan.net.nz
 ======
 
 GitHub repository for www.duncan.net.nz
@@ -7,13 +7,13 @@ This is a Drupal based build.
 The intention is to incorporate a series of pieces together to create a community that makes better use of the research on how people work together. This includes dealing with ownership, feedback including reimbursement and tragedy of the commons crimes, and group boundaries.
 
 Tasks:
-- Establish a Drupal 7 base.
-- Add Mollom for spam protection.
-- Add Organic Groups for group management.
-- Add Organic Groups Clone for group protection, similar to how git repositories fork when people want to take it in a different direction to developers. Will have to explore merging groups later.
-- Determine feasibility to getting the reimbursement mechanism out of the git project "Better Means"
+- Finish install from local environment. Having a 403 Forbidden issue on installation to the new VPS at the moment.
+- Add Mollom for spam protection. Use the current mollom account used for www.duncan.net.nz.
+- Update current place holder content with more depth, rather than just off the top of your head remarks.
+- Look at using Organic Groups and OG Clone for each project, in order to gather content together.
+- Determine feasibility to getting the reimbursement mechanism out of the git project "Better Means".
 - Create an annotation system using book pages that allows content to be nested within nodes that can be displayed side by side.
-- Add a reputation system, using Better Means and normal Drupal modules, that shows who added what to nodes, and gives reputation based on reads, likes and shares etc. 
+- Add a reputation system, using ideas from Better Means and normal Drupal modules, that shows who added what to nodes, and gives reputation based on reads, likes and shares etc. 
 
 Real world tasks:
 - Decide on a name/domain name for the project going forward.
